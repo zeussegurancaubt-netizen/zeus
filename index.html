@@ -15,32 +15,48 @@ body {
     color: white;
 }
 
+/* HEADER */
 header {
-    text-align: center;
-    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 20px;
 }
 
-header img {
-    width: 180px;
-    max-width: 90%;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 15px #00aaff);
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
 }
 
-h1 {
-    color: #00aaff;
-    font-size: 42px;
+.nome {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome h1 {
     margin: 0;
+    font-size: 28px;
+    color: #00aaff;
 }
 
-.sub {
+.nome span {
+    font-size: 14px;
     color: #ccc;
-    margin-top: 10px;
 }
 
+/* HERO */
 .hero {
     text-align: center;
     padding: 40px 20px;
+}
+
+.hero h2 {
+    font-weight: 300;
 }
 
 .botao {
@@ -59,6 +75,7 @@ h1 {
     transform: scale(1.05);
 }
 
+/* SERVIÇOS */
 .servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -81,12 +98,14 @@ h1 {
     color: #00aaff;
 }
 
+/* SOBRE */
 .sobre {
     padding: 40px 20px;
     text-align: center;
     color: #ccc;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 30px;
@@ -99,13 +118,17 @@ footer {
 <body>
 
 <header>
-    <img src="logo.png" alt="Zeus Segurança Eletrônica">
-    <h1>ZEUS</h1>
-    <div class="sub">Segurança Eletrônica</div>
+    <img src="logo.png" class="logo" alt="Zeus Logo">
+
+    <div class="nome">
+        <h1>ZEUS</h1>
+        <span>Segurança Eletrônica</span>
+    </div>
 </header>
 
 <section class="hero">
     <h2>Proteção inteligente para sua casa e empresa</h2>
+
     <a class="botao" href="https://wa.me/5512996461504">
         📲 Solicitar Orçamento
     </a>
@@ -144,7 +167,3 @@ footer {
 
 </body>
 </html>
-<img src="logo.png" alt="Zeus">
-<img src="logo.png" alt="Zeus"
-style="width:180px; display:block; margin:0 auto 20px;">
-
