@@ -1,168 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZEUS | Segurança Eletrônica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #f0f7ff; /* Tom azulado bem claro das imagens */
-            --text-dark: #0a0f2c;
-            --accent-green: #25D366; /* Verde WhatsApp */
-            --card-bg: #e1efff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZEUS Segurança Eletrônica</title>
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            /* Marca d'água opcional no fundo (como na imagem) */
-            background-image: url('logo.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: 60%;
-            background-blend-mode: overlay;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 50px;
-            padding: 20px;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0a0f2c;
+    color: white;
+}
 
-        .logo-pequena {
-            width: 80px; /* Tamanho reduzido conforme pedido */
-            height: auto;
-        }
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        .header-texto {
-            text-align: left;
-        }
+header img {
+    width: 180px;
+    max-width: 90%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px #00aaff);
+}
 
-        .header-texto h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            line-height: 1;
-            text-transform: uppercase;
-        }
+h1 {
+    color: #00aaff;
+    font-size: 42px;
+    margin: 0;
+}
 
-        .header-texto p {
-            margin: 0;
-            font-size: 1rem;
-            font-weight: 400;
-        }
+.sub {
+    color: #ccc;
+    margin-top: 10px;
+}
 
-        .slogan {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            color: #555;
-            text-align: center;
-        }
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        .servicos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #00aaff;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        .card {
-            background: var(--card-bg);
-            border: 2px solid var(--text-dark);
-            border-radius: 12px;
-            padding: 30px;
-            width: 200px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
+.botao:hover {
+    transform: scale(1.05);
+}
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
 
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            display: block;
-        }
+.card {
+    background: #11184a;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
 
-        .card h3 {
-            margin: 0;
-            font-size: 1.1rem;
-        }
+.card:hover {
+    transform: translateY(-5px);
+}
 
-        .botao-wpp {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background-color: var(--accent-green);
-            color: white;
-            text-decoration: none;
-            padding: 15px 35px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            transition: background 0.3s;
-        }
+.card h3 {
+    color: #00aaff;
+}
 
-        .botao-wpp:hover {
-            background-color: #1ebe57;
-        }
+.sobre {
+    padding: 40px 20px;
+    text-align: center;
+    color: #ccc;
+}
 
-        @media (max-width: 600px) {
-            header { flex-direction: column; text-align: center; }
-            .header-texto { text-align: center; }
-            .card { width: 80%; }
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #05081c;
+    color: #777;
+}
+</style>
+
 </head>
 <body>
 
-    <header>
-        <img src="logo.jpg" alt="Logo ZEUS" class="logo-pequena">
-        <div class="header-texto">
-            <h1>ZEUS</h1>
-            <p>segurança eletrônica</p>
-        </div>
-    </header>
+<header>
+    <img src="logo.png" alt="Zeus Segurança Eletrônica">
+    <h1>ZEUS</h1>
+    <div class="sub">Segurança Eletrônica</div>
+</header>
 
-    <p class="slogan">Proteção inteligente para sua casa e empresa</p>
-
-    <section class="servicos">
-        <div class="card">
-            <span class="card-icon">📹</span>
-            <h3>Câmeras de Segurança</h3>
-        </div>
-        <div class="card">
-            <span class="card-icon">🚨</span>
-            <h3>Alarmes</h3>
-        </div>
-        <div class="card">
-            <span class="card-icon">⚡</span>
-            <h3>Cercas Elétricas</h3>
-        </div>
-    </section>
-
-    <a href="https://wa.me/5512996461504" class="botao-wpp">
-        <span>📲</span> Falar no WhatsApp
+<section class="hero">
+    <h2>Proteção inteligente para sua casa e empresa</h2>
+    <a class="botao" href="https://wa.me/5512996461504">
+        📲 Solicitar Orçamento
     </a>
+</section>
+
+<section class="servicos">
+    <div class="card">
+        <h3>📹 Câmeras de Segurança</h3>
+        <p>Monitoramento completo em tempo real.</p>
+    </div>
+
+    <div class="card">
+        <h3>🚨 Alarmes</h3>
+        <p>Sistemas modernos contra invasões.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Cercas Elétricas</h3>
+        <p>Proteção perimetral eficiente.</p>
+    </div>
+</section>
+
+<section class="sobre">
+    <h2>Sobre a ZEUS</h2>
+    <p>
+        Especialistas em segurança eletrônica, oferecendo soluções modernas,
+        instalação profissional e suporte completo.
+    </p>
+</section>
+
+<footer>
+    © 2026 ZEUS Segurança Eletrônica  
+    <br>
+    📞 (12) 99646-1504
+</footer>
 
 </body>
 </html>
